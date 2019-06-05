@@ -16,7 +16,7 @@ export default {
   },
   
   created(){
-    axios.get('https://vuejstest-72551.firebaseio.com/users.json')
+    axios.get('/users.json')
       .then(res => {
         console.log(res)
         const data = res.data
@@ -27,7 +27,7 @@ export default {
           users.push(user)
         }
         console.log(users)
-        this.email = users[2].email
+        this.email = users[3].email
       })
       .catch(error => console.log(error))
   }
